@@ -29,6 +29,4 @@ O sistema irá fornecer acesso aos dados de exames de mamografia feitos por bras
     - [x]  Instalando/falando sobre as IDEs
 - [x]  Criando backend com Java spring
 - [x]  Criando frontend com Angular
-- [ ]  Integrando back/front e acessando dados
-
-(em andamento)
+- [x]  Integrando back/front e acessando dados
