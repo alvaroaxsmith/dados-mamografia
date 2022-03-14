@@ -13,7 +13,7 @@ O sistema irá fornecer acesso aos dados de exames de mamografia feitos por bras
 - Framework Java
     - Springboot - construção do backend
 - Framework JS
-    - Angular - construção da API web
+    - Angular - construção dp frontend
 - Integração back/frontend
 
 ## Percurso
@@ -28,7 +28,7 @@ O sistema irá fornecer acesso aos dados de exames de mamografia feitos por bras
     - [x]  Instalando o MySQL
     - [x]  Instalando/falando sobre as IDEs
 - [x]  Criando backend com Java spring
-- [ ]  Criando API web com Angular
+- [x]  Criando frontend com Angular
 - [ ]  Integrando back/front e acessando dados
 
 (em andamento)
