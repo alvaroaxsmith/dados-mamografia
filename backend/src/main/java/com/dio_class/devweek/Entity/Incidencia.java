@@ -12,8 +12,7 @@ public class Incidencia {
     private Long faixa_id;
     private Integer qnt_exames;
 
-    public Incidencia() {
-    }
+
 
     public Incidencia(Integer regiao_id, Integer mes, Long faixa_id, Integer qnt_exames) {
 
@@ -22,7 +21,8 @@ public class Incidencia {
         this.faixa_id = faixa_id;
         this.qnt_exames = qnt_exames;
     }
-
+    public Incidencia() {
+    }
 
     public Long getId() {
         return id;

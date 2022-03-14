@@ -8,11 +8,11 @@ public class Regiao {
     @Column(nullable = false)
     private Long id;
     private String regiao;
-    private Long qnt_exames;
+    private Long total_exames;
 
-    public Regiao(String regiao, Long qnt_exames) {
+    public Regiao(String regiao, Long total_exames) {
         this.regiao = regiao;
-        this.qnt_exames = qnt_exames;
+        this.total_exames = total_exames;
     }
 
     public Regiao(){}
@@ -29,11 +29,11 @@ public class Regiao {
         this.regiao = regiao;
     }
 
-    public Long getQnt_exames() {
-        return qnt_exames;
+    public Long getTotal_exames() {
+        return total_exames;
     }
 
-    public void setQnt_exames(Long qnt_exames) {
-        this.qnt_exames = qnt_exames;
+    public void setTotal_exames(Long total_exames) {
+        this.total_exames = total_exames;
     }
 }
