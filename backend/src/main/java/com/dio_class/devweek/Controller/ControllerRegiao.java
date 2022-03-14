@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api")
 public class ControllerRegiao {
     private final RegiaoRepo repository;
 
@@ -17,12 +18,12 @@ public class ControllerRegiao {
         this.repository = repository;
     }
 
-    @GetMapping("/regiao")
+    @GetMapping("/regioes")
     public List<Regiao> getRegiao(){
        return repository.findAll();
     }
 
-    @GetMapping("/regiao/{id}")
+    @GetMapping("/regioes/{id}")
     public ResponseEntity<?> getRegiaoById(@PathVariable Long id){
         Optional regiaoEscolhidaOptional = repository.findById(id);
         if (regiaoEscolhidaOptional.isPresent()){
@@ -32,11 +33,11 @@ public class ControllerRegiao {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping("/regiao/novo")
+    @PostMapping("/regioes/novo")
     public Regiao newFaixaEtaria(@RequestBody Regiao newFaixa){
         return repository.save(newFaixa);
     }
-    @DeleteMapping("/regiao/delete/{id}")
+    @DeleteMapping("/regioes/delete/{id}")
     public void deleteRegiao(@PathVariable Long id){
     repository.deleteById(id);
     }

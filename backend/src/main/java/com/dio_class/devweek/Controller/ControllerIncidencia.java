@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api")
 public class ControllerIncidencia {
     private final IncidenciaRepo inRepository;
 
@@ -17,7 +18,7 @@ public class ControllerIncidencia {
         this.inRepository = inRepository;
     }
 
-    @GetMapping("/incidencia")
+    @GetMapping("/ocorrencias")
     public ResponseEntity<List<Incidencia>> findIncidencia(){
         List<Incidencia> listaIncidencia = inRepository.findAll();
         if (listaIncidencia.isEmpty())
@@ -25,7 +26,7 @@ public class ControllerIncidencia {
         return new ResponseEntity<>(listaIncidencia, HttpStatus.OK);
     }
 
-    @GetMapping("/incidencia/{id}")
+    @GetMapping("/ocorrencias/{id}")
     public ResponseEntity<Incidencia> findIncidenciasById(@PathVariable Long id){
         Optional<Incidencia> incidenciaOptional = inRepository.findById(id);
         if (incidenciaOptional.isPresent()){
@@ -35,7 +36,7 @@ public class ControllerIncidencia {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping("/incidencia/novo")
+    @PostMapping("/ocorrencias/novo")
     public Incidencia newIncidencia(@RequestBody Incidencia newIncidencia){
         return inRepository.save(newIncidencia);
     }
