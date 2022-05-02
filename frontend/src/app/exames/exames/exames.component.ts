@@ -1,9 +1,9 @@
 import { FaixaetariaService } from './../service/faixaetaria.service';
-import { OcorrenciaService } from './../service/ocorrencia.service';
+import { IncidenciaService } from '../service/incidencia.service';
 import { RegiaoService } from '../service/regiao.service';
 import { Component, OnInit } from '@angular/core';
 import { Regiao } from '../model/regiao';
-import { Ocorrencia } from '../model/ocorrencia';
+import { Incidencia } from '../model/incidencia';
 import { Faixaetaria } from '../model/faixaetaria';
 
 @Component({
@@ -13,19 +13,19 @@ import { Faixaetaria } from '../model/faixaetaria';
 })
 export class ExamesComponent implements OnInit {
 
-  ocorrencia_exame: Ocorrencia[] = [];
+  incidencia_exame: Incidencia[] = [];
   regioes: Regiao[] = [];
   faixaetarias: Faixaetaria[] = [];
 
   constructor(
-    private ocorrenciaService:OcorrenciaService,
+    private incidenciaService:IncidenciaService,
     private regioesService: RegiaoService,
     private faixaEtariaService: FaixaetariaService
     ) { }
 
   ngOnInit(): void {
     this.regioesService.listRegioes() .subscribe(regioes => {this.regioes = regioes});
-    this.ocorrenciaService.listOcorrencias() .subscribe(ocorrencia_exame => {this.ocorrencia_exame = ocorrencia_exame});
+    this.incidenciaService.listaIncidencias() .subscribe(incidencia_exame => {this.incidencia_exame = incidencia_exame});
     this.faixaEtariaService.listFaixaEtaria() .subscribe(faixaetarias => {this.faixaetarias = faixaetarias});
   }
 

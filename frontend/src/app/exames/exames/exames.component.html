@@ -4,7 +4,7 @@
     <mat-card-subtitle>
       Exames de mamografia entre Julho e Julho de 2015
     </mat-card-subtitle>
-    <table matSort (matSortChange)="ocorrencia_exame">
+    <table matSort (matSortChange)="incidencia_exame">
       <tr>
         <th mat-sort-header="id">ID</th>
         <th mat-sort-header="regiao_id">ID Região</th>
@@ -13,7 +13,7 @@
         <th mat-sort-header="qnt_exames">N° de exames</th>
       </tr>
 
-      <tr *ngFor="let element of ocorrencia_exame">
+      <tr *ngFor="let element of incidencia_exame">
         <td>{{element.id}}</td>
         <td>{{element.regiao_id}}</td>
         <td>{{element.mes}}</td>
