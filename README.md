@@ -26,7 +26,7 @@ O sistema irá fornecer acesso aos dados de exames de mamografia feitos por bras
         - Estruturação de dados
         - Retrato fiel da realidade
     - [x]  Instalando o MySQL
-    - [x]  Instalando/falando sobre as IDEs
+<!--    - [x]  Instalando/falando sobre as IDEs -->
 - [x]  Criando backend com Java spring
 - [x]  Criando frontend com Angular
 - [x]  Integrando back/front e acessando dados
